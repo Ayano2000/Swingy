@@ -10,7 +10,7 @@ public class App {
     public static void main( String[] args ) throws IOException {
         try {
             GameController gamecontroller = new GameController();
-            gamecontroller.NewGame();
+            gamecontroller.Game(1);
         } catch (IOException e) {
             System.out.println("Error reading input!");
         }

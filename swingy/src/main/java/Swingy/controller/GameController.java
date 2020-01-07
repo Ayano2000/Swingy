@@ -6,15 +6,12 @@ import java.io.*;
 public class GameController {
     private static BufferedReader Reader = new BufferedReader(new InputStreamReader(System.in));
     private Hero Player;
-    public void NewGame() throws IOException {
-        Output display = new Output();
-        Hero hero = new Hero();
-        display.ChooseHero();
-        String input = Reader.readLine();
-        int HeroType = Integer.parseInt(input);
-        display.ChooseName();
-        String Name = Reader.readLine();
-        Player = hero.CreateHero(HeroType, Name);
-        System.out.println(Player);
+    public void Game(int type) throws IOException {
+        if (type == 1) {
+            Hero newHero = new Hero();
+            Player = newHero.CreateHero();
+            System.out.println("PLAYERR  ->  " + Player.name);
+        }
     }
+
 }
