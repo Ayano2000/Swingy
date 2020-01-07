@@ -3,7 +3,6 @@ import java.io.*;
 import view.*;
 
 public abstract class Hero {
-    private static BufferedReader Reader = new BufferedReader(new InputStreamReader(System.in));
     private String[] HeroType = { "MAGE", "WARRIOR", "ORC", "HUMAN" };
     protected String Type;
     protected String Name;
