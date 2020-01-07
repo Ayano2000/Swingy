@@ -1,5 +1,8 @@
+model/Orc.class
 view/InterfacePage.class
 view/UserInterface$1.class
+model/Human.class
+model/Warrior.class
 Swingy/App.class
 model/Mage.class
 controller/GameController.class
