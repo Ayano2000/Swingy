@@ -19,4 +19,14 @@ public class Output {
         System.out.println("1 --> Start a new game!");
         System.out.println("2 --> Load a game!");
     }
+
+    public void PrintMap(int[][] map) {
+        for (int row = 0; row < map.length; row++) {
+            for (int column = 0; column < map[row].length; column++) {
+                System.out.print(map[row][column] + "        ");
+            }
+            System.out.println("\n");
+        }
+    }
+
 }

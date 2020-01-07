@@ -6,6 +6,7 @@ public abstract class Hero {
     private String[] HeroType = { "MAGE", "WARRIOR", "ORC", "HUMAN" };
     protected String Type;
     protected String Name;
+    protected int Level = 1;
 
     // CONSTRUCTOR SETS ALL HEROES VARIABLES;
     public Hero (int type, String name) {
@@ -16,6 +17,8 @@ public abstract class Hero {
     public String getType() { return(this.Type); };
     // GET NAME
     public String getName() { return(this.Name); };
+    // GET LEVEL
+    public int getLevel() { return(this.Level); };
     // GETTING ATTRIBUTES
     public abstract int getHP();
     public abstract int getArmor();
