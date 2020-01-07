@@ -3,8 +3,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class InterfacePage extends JFrame {
-    public InterfacePage() {
-        super();
+    public InterfacePage(String title) {
+        super(title);
         // SET LAYOUT BORDER
         setLayout(new BorderLayout());
 
