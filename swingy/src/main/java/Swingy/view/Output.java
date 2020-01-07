@@ -14,4 +14,9 @@ public class Output {
         System.out.println("What is the name of this new champion?");
     }
 
+    public void Begin() {
+        System.out.println("Welcome would you like to:");
+        System.out.println("1 --> Start a new game!");
+        System.out.println("2 --> Load a game!");
+    }
 }

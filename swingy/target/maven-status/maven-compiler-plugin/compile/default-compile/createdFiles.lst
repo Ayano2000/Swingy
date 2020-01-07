@@ -1,12 +1,12 @@
-view/InterfacePage.class
 model/Orc.class
+view/InterfacePage.class
 view/UserInterface$1.class
 model/Human.class
 model/Warrior.class
 Swingy/App.class
 controller/GameController.class
 model/Mage.class
-view/Output.class
 model/Hero.class
-view/UserInterface.class
+view/Output.class
 model/GenerateHero.class
+view/UserInterface.class
