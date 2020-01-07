@@ -15,6 +15,8 @@ public class GameController {
             Player = CreateHero.generateHero();
             Map = preflight.PopulateMap(Map, Player);
         };
+        // NEED TO PUT HEROES INTO ITS OWN FOLDER,
+        // NEED TO CREATE THE ENEMIES.
     }
 
 }
