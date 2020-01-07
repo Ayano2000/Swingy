@@ -9,4 +9,9 @@ public class Output {
         System.out.println("3 - ORC");
         System.out.println("4 - HUMAN");
     };
+
+    public void ChooseName() {
+        System.out.println("What is the name of this new champion?");
+    }
+
 }
