@@ -23,6 +23,6 @@ public abstract class Enemy {
     public abstract int getHP();
     public abstract int getArmor();
     public abstract int getDamage();
-    public abstract int getArtifact();
+//    public abstract int getArtifact();
 
 }
