@@ -17,8 +17,16 @@ public class GameController {
         } else {
             // TODO --> LOAD GAME
         };
-        Map map = new Map(World);
-        map.TraverseMap(World);
+        while (Player.getLevel() <= 5) {
+            Map map = new Map(World);
+            if (map.TraverseMap(World) == true) {
+                Player.setLevel();
+                System.out.println("Congratulations you leveled up!");
+                World = preflight.PopulateMap(Player);
+                map = new Map(World);
+            }
+        }
+
 
 
     }

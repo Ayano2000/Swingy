@@ -11,7 +11,7 @@ public class Preflight {
         map[size / 2][size / 2] = 1;
         // SHIT CODE BUT WHATEVER IM SLEEPY;
         // ADDS ENEMY POSITION;
-        for (int i = 0; i < (hero.getLevel() * 5); i++) {
+        for (int i = 0; i < (hero.getLevel() * 10); i++) {
             int row = new Random().nextInt(9);
             int column = new Random().nextInt(9);
             if ((row == 4 && column == 4) || map[row][column] != 0) { i--; }
@@ -29,7 +29,7 @@ public class Preflight {
             };
         };
         // ADDS HIDDEN ENEMIES;
-        for (int i = 0; i <= (hero.getLevel() * 2); i++) {
+        for (int i = 0; i <= (hero.getLevel() * 5); i++) {
             int row = new Random().nextInt(9);
             int column = new Random().nextInt(9);
             if ((row == 4 && column == 4) || map[row][column] != 0) { i--; }
@@ -39,5 +39,4 @@ public class Preflight {
         };
         return (map);
     }
-
 }

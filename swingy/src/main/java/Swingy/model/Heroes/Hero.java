@@ -19,6 +19,11 @@ public abstract class Hero {
     public String getName() { return(this.Name); };
     // GET LEVEL
     public int getLevel() { return(this.Level); };
+    // SET LEVEL
+    public int setLevel() {
+        this.Level = this.Level + 1;
+        return (this.Level);
+    };
     // GETTING ATTRIBUTES
     public abstract int getHP();
     public abstract int getArmor();
