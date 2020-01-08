@@ -15,21 +15,25 @@ public class Map {
         this.MapInstance = map;
     }
 
-    public boolean TraverseMap(int[][] map) throws IOException {
+    public int TraverseMap(int[][] map) throws IOException {
         display.PrintMap(map);
         display.PrintDirectionChoice();
         while (true) {
             String input = Reader.readLine();
             this.CurrentMove = Direction[Integer.parseInt(input) - 1];
-            if (UpdateHeroPosition() == false) { display.PrintMap(map); }
-            else { return (true); };
+            if (UpdateHeroPosition() == 0) { display.PrintMap(map); }
+            else if (UpdateHeroPosition() == 2) {
+                display.EnemyEncountered();
+                return (2);
+            }
+            else { return (1); };
             // NEED TO ADD AN EXIT CONDITION
             if (Integer.parseInt(input) - 1 == 5) break;
         };
-        return (false);
+        return (0);
     }
 
-    public boolean UpdateHeroPosition() {
+    public int UpdateHeroPosition() {
         int[] Position = new int[2];
         int size = this.MapInstance.length + 1;
         for (int row = 0; row < this.MapInstance.length; row++) {
@@ -48,8 +52,10 @@ public class Map {
                 if (Position[0] == size) {
                     System.out.println(Position[0]);
                     System.out.println("LEVEL UP!");
-                    return (true);
-                } else { this.MapInstance[Position[0]][Position[1]] = 1; }
+                    return (1);
+                } else if (this.MapInstance[Position[0]][Position[1]] == 2
+                        || this.MapInstance[Position[0]][Position[1]] == 4) { return (2); }
+                else { this.MapInstance[Position[0]][Position[1]] = 1; }
                 break;
             case "EAST":
                 Position[0] = Position[0];
@@ -57,8 +63,10 @@ public class Map {
                 if (Position[1] == size) {
                     System.out.println(Position[1]);
                     System.out.println("LEVEL UP!");
-                    return (true);
-                } else { this.MapInstance[Position[0]][Position[1]] = 1; }
+                    return (1);
+                } else if (this.MapInstance[Position[0]][Position[1]] == 2
+                        || this.MapInstance[Position[0]][Position[1]] == 4) { return (2); }
+                else { this.MapInstance[Position[0]][Position[1]] = 1; }
                 break;
             case "WEST":
                 Position[0] = Position[0];
@@ -66,8 +74,10 @@ public class Map {
                 if (Position[1] == size || Position[1] == -1) {
                     System.out.println(Position[1]);
                     System.out.println("LEVEL UP!");
-                    return (true);
-                } else { this.MapInstance[Position[0]][Position[1]] = 1; }
+                    return (1);
+                } else if (this.MapInstance[Position[0]][Position[1]] == 2
+                        || this.MapInstance[Position[0]][Position[1]] == 4) { return (2); }
+                else { this.MapInstance[Position[0]][Position[1]] = 1; }
                 break;
             default:
                 Position[0] = Position[0] - 1;
@@ -75,9 +85,11 @@ public class Map {
                 if (Position[0] == size || Position[0] == -1) {
                     System.out.println(Position[0]);
                     System.out.println("LEVEL UP!");
-                    return (true);
-                } else { this.MapInstance[Position[0]][Position[1]] = 1; }
+                    return (1);
+                } else if (this.MapInstance[Position[0]][Position[1]] == 2
+                        || this.MapInstance[Position[0]][Position[1]] == 4) { return (2); }
+                else { this.MapInstance[Position[0]][Position[1]] = 1; }
         }
-        return (false);
+        return (0);
     }
 }

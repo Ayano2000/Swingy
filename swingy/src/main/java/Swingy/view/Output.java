@@ -59,7 +59,10 @@ public class Output {
     }
 
     public void EnemyEncountered() {
-        // TODO
+        System.out.println("It is in moments like these that a Hero is born");
+        System.out.println("Would you like to:");
+        System.out.println("1 - FIGHT");
+        System.out.println("2 - Run");
     }
 
 }
