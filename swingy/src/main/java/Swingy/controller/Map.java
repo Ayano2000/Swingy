@@ -21,8 +21,10 @@ public class Map {
         while (true) {
             String input = Reader.readLine();
             this.CurrentMove = Direction[Integer.parseInt(input) - 1];
-            if (UpdateHeroPosition() == 0) { display.PrintMap(map); }
-            else if (UpdateHeroPosition() == 2) {
+            if (UpdateHeroPosition() == 0) {
+                display.PrintMap(map);
+                display.PrintDirectionChoice();
+            } else if (UpdateHeroPosition() == 2) {
                 display.EnemyEncountered();
                 return (2);
             }
@@ -35,9 +37,9 @@ public class Map {
 
     public int UpdateHeroPosition() {
         int[] Position = new int[2];
-        int size = this.MapInstance.length + 1;
-        for (int row = 0; row < this.MapInstance.length; row++) {
-            for (int column = 0; column < this.MapInstance[row].length; column++) {
+        int size = this.MapInstance.length;
+        for (int row = 0; row < size; row++) {
+            for (int column = 0; column < size; column++) {
                 if (this.MapInstance[row][column] == 1) {
                     Position[0] = row;
                     Position[1] = column;
@@ -53,8 +55,7 @@ public class Map {
                     System.out.println(Position[0]);
                     System.out.println("LEVEL UP!");
                     return (1);
-                } else if (this.MapInstance[Position[0]][Position[1]] == 2
-                        || this.MapInstance[Position[0]][Position[1]] == 4) { return (2); }
+                }
                 else { this.MapInstance[Position[0]][Position[1]] = 1; }
                 break;
             case "EAST":
@@ -64,8 +65,7 @@ public class Map {
                     System.out.println(Position[1]);
                     System.out.println("LEVEL UP!");
                     return (1);
-                } else if (this.MapInstance[Position[0]][Position[1]] == 2
-                        || this.MapInstance[Position[0]][Position[1]] == 4) { return (2); }
+                }
                 else { this.MapInstance[Position[0]][Position[1]] = 1; }
                 break;
             case "WEST":
@@ -75,8 +75,7 @@ public class Map {
                     System.out.println(Position[1]);
                     System.out.println("LEVEL UP!");
                     return (1);
-                } else if (this.MapInstance[Position[0]][Position[1]] == 2
-                        || this.MapInstance[Position[0]][Position[1]] == 4) { return (2); }
+                }
                 else { this.MapInstance[Position[0]][Position[1]] = 1; }
                 break;
             default:
@@ -86,8 +85,7 @@ public class Map {
                     System.out.println(Position[0]);
                     System.out.println("LEVEL UP!");
                     return (1);
-                } else if (this.MapInstance[Position[0]][Position[1]] == 2
-                        || this.MapInstance[Position[0]][Position[1]] == 4) { return (2); }
+                }
                 else { this.MapInstance[Position[0]][Position[1]] = 1; }
         }
         return (0);

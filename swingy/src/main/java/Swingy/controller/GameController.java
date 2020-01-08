@@ -17,25 +17,23 @@ public class GameController {
         } else {
             // TODO --> LOAD GAME
         };
+        Map map = new Map(World);
         while (Player.getLevel() <= 5) {
-            Map map = new Map(World);
-            if (map.TraverseMap(World) == 1) {
+            int resultant = map.TraverseMap(World);
+            if (resultant == 1) {
                 Player.setLevel();
                 System.out.println("Congratulations you leveled up!");
                 World = preflight.PopulateMap(Player);
                 map = new Map(World);
-            } else if (map.TraverseMap(World) == 2) {
-                int choice = Integer.parseInt(Reader.readLine());
-                if (choice == 1) {
-                    //FIGHT
-                    System.out.println("FIGHT ME (ง •̀_•́)ง");
-                }
+//            } else if (resultant == 2) {
+//                int choice = Integer.parseInt(Reader.readLine());
+//                if (choice == 1) {
+//                    FIGHT
+//                    System.out.println("FIGHT ME (ง •̀_•́)ง");
+//                }
             }
 
         }
-
-
-
     }
 
 }
