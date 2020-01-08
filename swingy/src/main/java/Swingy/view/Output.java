@@ -58,5 +58,8 @@ public class Output {
         System.out.println("          SOUTH          ");
     }
 
+    public void EnemyEncountered() {
+        // TODO
+    }
 
 }

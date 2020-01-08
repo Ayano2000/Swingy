@@ -14,7 +14,7 @@ public class Map {
     public Map(int[][] map) {
         this.MapInstance = map;
     }
-    // VOID?????????????????
+
     public void TraverseMap(int[][] map) throws IOException {
         display.PrintMap(map);
         display.PrintDirectionChoice();
