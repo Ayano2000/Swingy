@@ -8,15 +8,19 @@ public class GameController {
     private static GenerateHero CreateHero = new GenerateHero();
     private static Preflight preflight = new Preflight();
     private Hero Player;
-    protected int[][] Map = new int[9][9];
+    protected int[][] World;
 
     public void Game(int type) throws IOException {
         if (type == 1 /* TYPE 1 == NEW GAME */) {
             Player = CreateHero.generateHero();
-            Map = preflight.PopulateMap(Map, Player);
+            World = preflight.PopulateMap(Player);
+        } else {
+            // TODO --> LOAD GAME
         };
-        // NEED TO PUT HEROES INTO ITS OWN FOLDER,
-        // NEED TO CREATE THE ENEMIES.
+        Map map = new Map(World);
+        map.TraverseMap(World);
+
+
     }
 
 }

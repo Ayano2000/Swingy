@@ -4,15 +4,17 @@ import model.*;
 import java.util.*;
 
 public class Preflight {
-    public int[][] PopulateMap(int[][] map, Hero hero) {
-        // 1 == HERO, 2 == ENEMY, 3 == ARTIFACT;
-        map[4][4] = 1;
+    public int[][] PopulateMap(Hero hero) {
+        int size = ((hero.getLevel() - 1) * 5 + 10 - (hero.getLevel() % 2));
+        int map[][] = new int[size][size];
+        // 1 == HERO, 2 == ENEMY, 3 == ARTIFACT, 4 == HIDDEN ENEMY;
+        map[size / 2][size / 2] = 1;
         // SHIT CODE BUT WHATEVER IM SLEEPY;
         // ADDS ENEMY POSITION;
         for (int i = 0; i < (hero.getLevel() * 5); i++) {
             int row = new Random().nextInt(9);
             int column = new Random().nextInt(9);
-            if (row == 4 && column == 4) { i--; }
+            if ((row == 4 && column == 4) || map[row][column] != 0) { i--; }
             else {
                 map[row][column] = 2;
             };
@@ -21,9 +23,18 @@ public class Preflight {
         for (int i = 0; i <= hero.getLevel(); i++) {
             int row = new Random().nextInt(9);
             int column = new Random().nextInt(9);
-            if (row == 4 && column == 4) { i--; }
+            if ((row == 4 && column == 4) || map[row][column] != 0) { i--; }
             else {
                 map[row][column] = 3;
+            };
+        };
+        // ADDS HIDDEN ENEMIES;
+        for (int i = 0; i <= (hero.getLevel() * 2); i++) {
+            int row = new Random().nextInt(9);
+            int column = new Random().nextInt(9);
+            if ((row == 4 && column == 4) || map[row][column] != 0) { i--; }
+            else {
+                map[row][column] = 4;
             };
         };
         return (map);
