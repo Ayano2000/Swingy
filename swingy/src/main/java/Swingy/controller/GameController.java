@@ -9,6 +9,7 @@ public class GameController {
     private static Preflight preflight = new Preflight();
     private static Output display = new Output();
     private Hero Player;
+    private Enemy enemy;
     protected int[][] World;
 
     public void Game(int type) throws IOException {
@@ -26,6 +27,7 @@ public class GameController {
                 if (choice == 1) {
 //                    FIGHT
                     System.out.println("FIGHT ME (ง •̀_•́)ง");
+                    enemy = GenerateEnemy(Player);
                 } else {
 //                    RUN
                     display.RunAwayLittleBitch();

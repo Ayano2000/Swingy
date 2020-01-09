@@ -11,6 +11,6 @@ model/GenerateHero.class
 model/Skeleton.class
 model/Warrior.class
 model/Enemy.class
-model/Mage.class
 controller/GameController.class
+model/Mage.class
 view/Output.class
