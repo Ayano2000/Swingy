@@ -7,9 +7,13 @@
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/controller/Preflight.java
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/controller/GameController.java
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/App.java
+/homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/model/Enemies/GenerateEnemy.java
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/view/InterfacePage.java
+/homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/model/Enemies/Dragon.java
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/view/UserInterface.java
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/model/Heroes/Human.java
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/view/Output.java
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/model/Heroes/Mage.java
+/homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/model/Enemies/Witch.java
+/homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/model/Enemies/Steve.java
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/model/Heroes/Hero.java

@@ -2,6 +2,7 @@ package model;
 import view.*;
 import controller.*;
 import java.io.*;
+import java.util.Random;
 
 public class GenerateEnemy {
     private static BufferedReader Reader = new BufferedReader(new InputStreamReader(System.in));
@@ -10,8 +11,8 @@ public class GenerateEnemy {
     public Enemy generateEnemy(Hero hero) throws IOException {
         Enemy enemy = null;
         Output display = new Output();
-        int EnemyType = Random().nextInt(4) - 1;
-        switch(EnemyTpe) {
+        int EnemyType = new Random().nextInt(4) - 1;
+        switch(EnemyType) {
             case 0:
                 enemy = new Skeleton(hero, "Skeleton");
                 break;

@@ -6,6 +6,7 @@ import java.io.*;
 public class GameController {
     private static BufferedReader Reader = new BufferedReader(new InputStreamReader(System.in));
     private static GenerateHero CreateHero = new GenerateHero();
+    private static GenerateEnemy CreateEnemy = new GenerateEnemy();
     private static Preflight preflight = new Preflight();
     private static Output display = new Output();
     private Hero Player;
@@ -27,7 +28,8 @@ public class GameController {
                 if (choice == 1) {
 //                    FIGHT
                     System.out.println("FIGHT ME (ง •̀_•́)ง");
-                    enemy = GenerateEnemy(Player);
+                    enemy = CreateEnemy.generateEnemy(this.Player);
+                    display.ShowEnemy(enemy);
                 } else {
 //                    RUN
                     display.RunAwayLittleBitch();
