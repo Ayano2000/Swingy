@@ -81,7 +81,8 @@ public class Output {
         System.out.print("\033[H\033[2J");
         System.out.flush();
         if (enemy.getType() == "Skeleton") {
-            System.out.println("      .-.\n" +
+            System.out.println( "SKELETON BONEY-M GONNA HIT YOU\n\n" +
+                    "      .-.\n" +
                     "     (o.o)\n" +
                     "      |=|\n" +
                     "     __|__\n" +
@@ -97,6 +98,7 @@ public class Output {
                     "    ==' '==");
         } else if (enemy.getType() == "Witch") {
             System.out.println(
+                    "WITCH WITCHATAH GONNA TURN YOU INTO A FROG\n\n" +
                     "       * (     /      \\    ___\n" +
                     "          \"     \"        _/ /\n" +
                     "         (   *  )    ___/   |\n" +
@@ -113,7 +115,9 @@ public class Output {
                     "  snd  '._/_)_(\\__.'   (__,(__,_]\n" +
                     "      @---()_.'---@");
         } else if (enemy.getType() == "Dragon") {
-            System.out.println("                \\||/\n" +
+            System.out.println(
+                    "DRAGON SAYS YOU BETTER DRA-GONE YOUR ASS OUTTA HERE\n\n" +
+                    "                \\||/\n" +
                     "                |  @___oo\n" +
                     "      /\\  /\\   / (__,,,,|\n" +
                     "     ) /^\\) ^\\/ _)\n" +
@@ -125,7 +129,9 @@ public class Output {
                     " | \\____(      )___) )___\n" +
                     "  \\______(_______;;; __;;;");
         } else if (enemy.getType() == "Steve") {
-            System.out.println("      /:\"\"|" +
+            System.out.println(
+                    "I DONT KNOW WHY THIS IDIOT PUT ME HERE\n\n" +
+                    "      /:\"\"|" + "\n" +
                     "     |: 66|_ " + "\n" +
                     "     C     _)" + "\n" +
                     "      \\ ._| " + "\n" +
