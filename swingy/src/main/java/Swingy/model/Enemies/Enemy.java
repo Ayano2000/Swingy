@@ -13,6 +13,7 @@ public abstract class Enemy {
         this.Type = type;
         this.Level = hero.getLevel();
     };
+
     // GET TYPE
     public String getType() { return(this.Type); };
     // GET LEVEL

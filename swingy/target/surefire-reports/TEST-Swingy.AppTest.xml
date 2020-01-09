@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Swingy.AppTest" time="0.027" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Swingy.AppTest" time="0.029" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="13"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ZA"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-13.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/homes/ayano/Desktop/Swingy/swingy/target/surefire/surefirebooter2078498346283665661.jar /homes/ayano/Desktop/Swingy/swingy/target/surefire 2020-01-09T18-57-36_411-jvmRun1 surefire11128905965077376625tmp surefire_015964740626340521884tmp"/>
+    <property name="sun.java.command" value="/homes/ayano/Desktop/Swingy/swingy/target/surefire/surefirebooter1811841782065018169.jar /homes/ayano/Desktop/Swingy/swingy/target/surefire 2020-01-09T20-17-19_378-jvmRun1 surefire7780679259346147920tmp surefire_015066760064554674987tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/homes/ayano/Desktop/Swingy/swingy/target/test-classes:/homes/ayano/Desktop/Swingy/swingy/target/classes:/homes/ayano/.m2/repository/junit/junit/4.11/junit-4.11.jar:/homes/ayano/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
@@ -28,7 +28,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/homes/ayano/Desktop/Swingy/swingy/target/surefire/surefirebooter2078498346283665661.jar"/>
+    <property name="surefire.real.class.path" value="/homes/ayano/Desktop/Swingy/swingy/target/surefire/surefirebooter1811841782065018169.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="13+33"/>
