@@ -67,4 +67,14 @@ public class Output {
         System.out.println("2 - Run");
     }
 
+    public void RunAwayLittleBitch() {
+        System.out.println("            _( }\n");
+        System.out.println("   -=  _  <<  \\\n");
+        System.out.println("      `.\\__/`/\\\\\n");
+        System.out.println(" -=     '--'\\\\  `\n");
+        System.out.println("      -=    //\n");
+        System.out.println("            \\)");
+    }
+
+
 }

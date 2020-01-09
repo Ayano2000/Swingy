@@ -1,13 +1,13 @@
-model/Orc.class
 view/InterfacePage.class
+model/Orc.class
 view/UserInterface$1.class
 model/Human.class
 Swingy/App.class
 controller/Preflight.class
 model/Hero.class
 controller/Map.class
-model/GenerateHero.class
 view/UserInterface.class
+model/GenerateHero.class
 model/Skeleton.class
 model/Warrior.class
 model/Enemy.class

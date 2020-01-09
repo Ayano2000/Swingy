@@ -21,10 +21,12 @@ public class Map {
         while (true) {
             String input = Reader.readLine();
             this.CurrentMove = Direction[Integer.parseInt(input) - 1];
-            if (UpdateHeroPosition() == 0) {
+            int EventChecker = UpdateHeroPosition();
+            System.out.println(EventChecker);
+            if (EventChecker == 0) {
                 display.PrintMap(map);
                 display.PrintDirectionChoice();
-            } else if (UpdateHeroPosition() == 2) {
+            } else if (EventChecker == 2) {
                 display.EnemyEncountered();
                 return (2);
             }
@@ -51,6 +53,9 @@ public class Map {
             case "SOUTH":
                 Position[0] = Position[0] + 1;
                 Position[1] = Position[1];
+                if (this.MapInstance[Position[0]][Position[1]] == 2) {
+                    return (2);
+                }
                 if (Position[0] == size) {
                     System.out.println(Position[0]);
                     System.out.println("LEVEL UP!");
@@ -61,6 +66,9 @@ public class Map {
             case "EAST":
                 Position[0] = Position[0];
                 Position[1] = Position[1] + 1;
+                if (this.MapInstance[Position[0]][Position[1]] == 2) {
+                    return (2);
+                }
                 if (Position[1] == size) {
                     System.out.println(Position[1]);
                     System.out.println("LEVEL UP!");
@@ -71,6 +79,9 @@ public class Map {
             case "WEST":
                 Position[0] = Position[0];
                 Position[1] = Position[1] - 1;
+                if (this.MapInstance[Position[0]][Position[1]] == 2) {
+                    return (2);
+                }
                 if (Position[1] == size || Position[1] == -1) {
                     System.out.println(Position[1]);
                     System.out.println("LEVEL UP!");
@@ -81,6 +92,9 @@ public class Map {
             default:
                 Position[0] = Position[0] - 1;
                 Position[1] = Position[1];
+                if (this.MapInstance[Position[0]][Position[1]] == 2) {
+                    return (2);
+                }
                 if (Position[0] == size || Position[0] == -1) {
                     System.out.println(Position[0]);
                     System.out.println("LEVEL UP!");

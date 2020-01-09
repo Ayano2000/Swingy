@@ -7,6 +7,7 @@ public class GameController {
     private static BufferedReader Reader = new BufferedReader(new InputStreamReader(System.in));
     private static GenerateHero CreateHero = new GenerateHero();
     private static Preflight preflight = new Preflight();
+    private static Output display = new Output();
     private Hero Player;
     protected int[][] World;
 
@@ -18,22 +19,28 @@ public class GameController {
             // TODO --> LOAD GAME
         };
         Map map = new Map(World);
+        int resultant = -1;
         while (Player.getLevel() <= 5) {
-            int resultant = map.TraverseMap(World);
-            if (resultant == 1) {
-                Player.setLevel();
-                System.out.println("Congratulations you leveled up!");
-                World = preflight.PopulateMap(Player);
-                map = new Map(World);
-//            } else if (resultant == 2) {
-//                int choice = Integer.parseInt(Reader.readLine());
-//                if (choice == 1) {
+            if (resultant == 2) {
+                int choice = Integer.parseInt(Reader.readLine());
+                if (choice == 1) {
 //                    FIGHT
-//                    System.out.println("FIGHT ME (ง •̀_•́)ง");
-//                }
+                    System.out.println("FIGHT ME (ง •̀_•́)ง");
+                } else {
+//                    RUN
+                    display.RunAwayLittleBitch();
+//                    resultant = -1;
+                }
+            } else {
+                resultant = map.TraverseMap(World);
+                if (resultant == 1) {
+                    Player.setLevel();
+                    System.out.println("Congratulations you leveled up!");
+                    World = preflight.PopulateMap(Player);
+                    map = new Map(World);
+                }
             }
 
         }
     }
-
 }
