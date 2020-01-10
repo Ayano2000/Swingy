@@ -12,7 +12,7 @@ public class Witch extends Enemy {
     public Witch(Hero hero, String type) {
         super(hero, type);
         this.HP = 75 * hero.getLevel();
-        this.Armor = 7 * hero.getLevel();
+        this.Armor = 40 * hero.getLevel();
         this.Damage = 100 * hero.getLevel();
     };
 

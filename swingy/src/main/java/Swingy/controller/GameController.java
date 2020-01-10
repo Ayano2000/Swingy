@@ -27,14 +27,13 @@ public class GameController {
                 int choice = Integer.parseInt(Reader.readLine());
                 if (choice == 1) {
 //                    FIGHT
-                    System.out.println("FIGHT ME (ง •̀_•́)ง");
                     enemy = CreateEnemy.generateEnemy(this.Player);
                     display.ShowEnemy(enemy);
                     Fight fight = new Fight();
                     if (fight.Battle(this.Player, enemy) == 1) {
                         System.out.println("YOU WON!");
                     } else if (fight.Battle(this.Player, enemy) == 0) {
-                        System.out.println("YOU LOST :(");
+                        display.GameOver(enemy.getType());
                     }
                 } else {
 //                    RUN

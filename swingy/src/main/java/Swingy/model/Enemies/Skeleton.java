@@ -12,7 +12,7 @@ public class Skeleton extends Enemy {
     public Skeleton(Hero hero, String type) {
         super(hero, type);
         this.HP = 100 * hero.getLevel();
-        this.Armor = 2 * hero.getLevel();
+        this.Armor = 0 * hero.getLevel();
         this.Damage = 60 * hero.getLevel();
     };
 

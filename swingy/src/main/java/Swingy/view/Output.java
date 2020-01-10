@@ -62,7 +62,7 @@ public class Output {
     public void EnemyEncountered() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        System.out.println("It is in moments like these that a Hero is born");
+        System.out.println("\n\nFIGHT ME (ง •̀_•́)ง\n\n");
         System.out.println("Would you like to:");
         System.out.println("1 - FIGHT");
         System.out.println("2 - Run");
@@ -154,6 +154,14 @@ public class Output {
         }
     }
 
-
-
+    public void GameOver(String type) {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+        System.out.println(" o-o    O  o   o o--o      o-o  o   o o--o o--o  \n" +
+                "o      / \\ |\\ /| |        o   o |   | |    |   | \n" +
+                "|  -o o---o| O | O-o      |   | o   o O-o  O-Oo  \n" +
+                "o   | |   ||   | |        o   o  \\ /  |    |  \\  \n" +
+                " o-o  o   oo   o o--o      o-o    o   o--o o   o");
+        System.out.println(RED + "\n\nUnfortunately you were a little bitch and got killed by a " + type + RESET);
+    }
 }

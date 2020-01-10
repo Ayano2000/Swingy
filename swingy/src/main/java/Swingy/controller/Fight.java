@@ -26,4 +26,3 @@ public class Fight {
         return (2);
     }
 }
-

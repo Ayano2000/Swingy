@@ -12,7 +12,7 @@ public class Human extends Hero {
     public Human(int type, String name) {
         super(type, name);
         this.HP = 500;
-        this.Armor = 10;
+        this.Armor = 30;
         this.Damage = 80;
     };
 
