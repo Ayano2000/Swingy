@@ -2,6 +2,9 @@ package controller;
 import view.*;
 import model.*;
 import java.io.*;
+import java.util.*;
+import java.lang.*;
+
 
 public class GameController {
     private static BufferedReader Reader = new BufferedReader(new InputStreamReader(System.in));
@@ -31,10 +34,18 @@ public class GameController {
                     display.ShowEnemy(enemy);
                     Fight fight = new Fight();
                     if (fight.Battle(this.Player, enemy) == 1) {
-
-                        //resultant = map.TraverseMap(World);
+                        // YOU WON
+                        // press any key to confirm
                     } else if (fight.Battle(this.Player, enemy) == 0) {
                         display.GameOver(enemy.getType());
+                        String exit = Reader.readLine();
+                        if (exit != null) {
+                            System.out.println(exit);
+                            System.exit(0);
+                        } else {
+                            display.GameOver(enemy.getType());
+                        }
+                        // press any key to confirm
                     }
                 } else {
 //                    RUN

@@ -163,5 +163,6 @@ public class Output {
                 "o   | |   ||   | |        o   o  \\ /  |    |  \\  \n" +
                 " o-o  o   oo   o o--o      o-o    o   o--o o   o");
         System.out.println(RED + "\n\nUnfortunately you were a little bitch and got killed by a " + type + RESET);
+        System.out.println(RED + "Tpye any key to close game" + RESET);
     }
 }

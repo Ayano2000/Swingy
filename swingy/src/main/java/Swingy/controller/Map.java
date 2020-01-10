@@ -53,52 +53,56 @@ public class Map {
             case "SOUTH":
                 Position[0] = Position[0] + 1;
                 Position[1] = Position[1];
-                if (this.MapInstance[Position[0]][Position[1]] == 2) {
-                    return (2);
-                }
                 if (Position[0] == size) {
                     System.out.println(Position[0]);
                     System.out.println("LEVEL UP!");
                     return (1);
+                }
+                if (this.MapInstance[Position[0]][Position[1]] == 2) {
+                    this.MapInstance[Position[0]][Position[1]] = 1;
+                    return (2);
                 }
                 else { this.MapInstance[Position[0]][Position[1]] = 1; }
                 break;
             case "EAST":
                 Position[0] = Position[0];
                 Position[1] = Position[1] + 1;
-                if (this.MapInstance[Position[0]][Position[1]] == 2) {
-                    return (2);
-                }
                 if (Position[1] == size) {
                     System.out.println(Position[1]);
                     System.out.println("LEVEL UP!");
                     return (1);
+                }
+                if (this.MapInstance[Position[0]][Position[1]] == 2) {
+                    this.MapInstance[Position[0]][Position[1]] = 1;
+                    return (2);
                 }
                 else { this.MapInstance[Position[0]][Position[1]] = 1; }
                 break;
             case "WEST":
                 Position[0] = Position[0];
                 Position[1] = Position[1] - 1;
-                if (this.MapInstance[Position[0]][Position[1]] == 2) {
-                    return (2);
-                }
                 if (Position[1] == size || Position[1] == -1) {
                     System.out.println(Position[1]);
                     System.out.println("LEVEL UP!");
                     return (1);
+                }
+                if (this.MapInstance[Position[0]][Position[1]] == 2) {
+                    this.MapInstance[Position[0]][Position[1]] = 1;
+                    return (2);
                 }
                 else { this.MapInstance[Position[0]][Position[1]] = 1; }
                 break;
             default:
                 Position[0] = Position[0] - 1;
                 Position[1] = Position[1];
-                if (this.MapInstance[Position[0]][Position[1]] == 2) {
-                    return (2);
-                }
                 if (Position[0] == size || Position[0] == -1) {
                     System.out.println(Position[0]);
                     System.out.println("LEVEL UP!");
                     return (1);
+                }
+                if (this.MapInstance[Position[0]][Position[1]] == 2) {
+                    this.MapInstance[Position[0]][Position[1]] = 1;
+                    return (2);
                 }
                 else { this.MapInstance[Position[0]][Position[1]] = 1; }
         }
