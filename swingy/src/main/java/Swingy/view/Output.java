@@ -165,4 +165,11 @@ public class Output {
         System.out.println(RED + "\n\nUnfortunately you were a little bitch and got killed by a " + type + RESET);
         System.out.println(RED + "Tpye any key to close game" + RESET);
     }
+
+    public void BattleWon(String type) {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+        System.out.println(GREEN + "Rejoice for the " + type + " was killed" + RESET);
+        System.out.println(GREEN + "Tpye any key to continue game" + RESET);
+    }
 }

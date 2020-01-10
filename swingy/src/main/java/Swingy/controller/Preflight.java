@@ -12,8 +12,8 @@ public class Preflight {
         // SHIT CODE BUT WHATEVER IM SLEEPY;
         // ADDS ENEMY POSITION;
         for (int i = 0; i < (hero.getLevel() * 10); i++) {
-            int row = new Random().nextInt(9);
-            int column = new Random().nextInt(9);
+            int row = new Random().nextInt(size);
+            int column = new Random().nextInt(size);
             if ((row == 4 && column == 4) || map[row][column] != 0) { i--; }
             else {
                 map[row][column] = 2;
@@ -21,8 +21,8 @@ public class Preflight {
         };
         // ADDS ARTIFACTS FOR THE HREO TO FIND
         for (int i = 0; i <= hero.getLevel(); i++) {
-            int row = new Random().nextInt(9);
-            int column = new Random().nextInt(9);
+            int row = new Random().nextInt(size);
+            int column = new Random().nextInt(size);
             if ((row == 4 && column == 4) || map[row][column] != 0) { i--; }
             else {
                 map[row][column] = 3;
@@ -30,8 +30,8 @@ public class Preflight {
         };
         // ADDS HIDDEN ENEMIES;
         for (int i = 0; i <= (hero.getLevel() * 5); i++) {
-            int row = new Random().nextInt(9);
-            int column = new Random().nextInt(9);
+            int row = new Random().nextInt(size);
+            int column = new Random().nextInt(size);
             if ((row == 4 && column == 4) || map[row][column] != 0) { i--; }
             else {
                 map[row][column] = 4;

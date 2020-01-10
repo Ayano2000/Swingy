@@ -1,5 +1,5 @@
-view/InterfacePage.class
 model/Orc.class
+view/InterfacePage.class
 view/UserInterface$1.class
 model/GenerateEnemy.class
 model/Witch.class
@@ -10,12 +10,12 @@ Swingy/App.class
 controller/Preflight.class
 model/Hero.class
 controller/Map.class
-view/UserInterface.class
 model/GenerateHero.class
+view/UserInterface.class
 model/Skeleton.class
 model/Warrior.class
 model/Enemy.class
-controller/GameController.class
 model/Mage.class
+controller/GameController.class
 view/Output.class
 controller/Fight.class

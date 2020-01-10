@@ -32,20 +32,26 @@ public class GameController {
 //                    FIGHT
                     enemy = CreateEnemy.generateEnemy(this.Player);
                     display.ShowEnemy(enemy);
-                    Fight fight = new Fight();
-                    if (fight.Battle(this.Player, enemy) == 1) {
-                        // YOU WON
-                        // press any key to confirm
-                    } else if (fight.Battle(this.Player, enemy) == 0) {
-                        display.GameOver(enemy.getType());
-                        String exit = Reader.readLine();
-                        if (exit != null) {
-                            System.out.println(exit);
-                            System.exit(0);
-                        } else {
+                    String confirm = Reader.readLine();
+                    if (confirm != null) {
+                        Fight fight = new Fight();
+                        if (fight.Battle(this.Player, enemy) == 1) {
+                            // YOU WON
+                            display.BattleWon(enemy.getType());
+                            String Continue = Reader.readLine();
+                            if (Continue != null) {
+                                resultant = -1;
+                            }
+                            // press any key to confirm
+                        } else if (fight.Battle(this.Player, enemy) == 0) {
                             display.GameOver(enemy.getType());
+                            String exit = Reader.readLine();
+                            if (exit != null) {
+                                System.exit(0);
+                            } else {
+                                display.GameOver(enemy.getType());
+                            }
                         }
-                        // press any key to confirm
                     }
                 } else {
 //                    RUN
