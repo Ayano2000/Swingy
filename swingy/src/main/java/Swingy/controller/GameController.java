@@ -31,7 +31,8 @@ public class GameController {
                     display.ShowEnemy(enemy);
                     Fight fight = new Fight();
                     if (fight.Battle(this.Player, enemy) == 1) {
-                        System.out.println("YOU WON!");
+
+                        //resultant = map.TraverseMap(World);
                     } else if (fight.Battle(this.Player, enemy) == 0) {
                         display.GameOver(enemy.getType());
                     }

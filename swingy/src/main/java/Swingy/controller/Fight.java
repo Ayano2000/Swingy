@@ -11,7 +11,7 @@ public class Fight {
         this.hero = player;
         this.enemy = opponent;
         int HeroAttack = (this.hero.getDamage() - this.enemy.getArmor());
-        int EnemyAttack = (this.enemy.getArmor() - this.hero.getDamage());
+        int EnemyAttack = (this.enemy.getDamage() - this.hero.getArmor());
         int HeroHP = this.hero.getHP();
         int EnemyHP = this.enemy.getHP();
         while (HeroHP > 0 && EnemyHP > 0) {
