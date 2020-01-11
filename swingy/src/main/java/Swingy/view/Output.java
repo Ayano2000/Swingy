@@ -44,11 +44,11 @@ public class Output {
         for (int row = 0; row < map.length; row++) {
             for (int column = 0; column < map[row].length; column++) {
                 if (map[row][column] == 1) {
-                    System.out.print(GREEN + map[row][column] + RESET + "        ");
+                    System.out.print(GREEN + map[row][column] + RESET + "  ");
                 } else if (map[row][column] == 2) {
-                    System.out.print(RED + map[row][column] + RESET + "        ");
+                    System.out.print(RED + map[row][column] + RESET + "  ");
                 } else {
-                    System.out.print("0" + "        ");
+                    System.out.print("0" + "  ");
                 }
             }
             System.out.println("\n");
@@ -152,6 +152,7 @@ public class Output {
                     "      |_||__ " + "\n" +
                     "      (____)))" + "\n");
         }
+        System.out.println(YELLOW + "Press any key to begin" + RESET);
     }
 
     public void GameOver(String type) {
@@ -170,6 +171,6 @@ public class Output {
         System.out.print("\033[H\033[2J");
         System.out.flush();
         System.out.println(GREEN + "Rejoice for the " + type + " was killed" + RESET);
-        System.out.println(GREEN + "Tpye any key to continue game" + RESET);
+        System.out.println(GREEN + "Type any key to continue game" + RESET);
     }
 }

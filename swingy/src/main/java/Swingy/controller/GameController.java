@@ -61,8 +61,10 @@ public class GameController {
             } else {
                 resultant = map.TraverseMap(World);
                 if (resultant == 1) {
+                    World = preflight.PopulateMap(Player);
+                    map = new Map(World);
+                } else {
                     Player.setLevel();
-                    System.out.println("Congratulations you leveled up!");
                     World = preflight.PopulateMap(Player);
                     map = new Map(World);
                 }

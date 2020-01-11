@@ -15,7 +15,15 @@ public class Mage extends Hero {
         this.Armor = 0;
         this.Damage = 125;
     };
-
+    public void setHP(int val) {
+        this.HP = this.HP + val;
+    };
+    public void setDamage(int val) {
+        this.Damage = this.Damage + val;
+    };
+    public void setArmor(int val) {
+        this.Armor = this.Armor + val;
+    };
     // GET HP
     public int getHP() { return(this.HP); };
     // GET ARMOR

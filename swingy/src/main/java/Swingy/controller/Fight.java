@@ -1,9 +1,10 @@
 package controller;
 import model.*;
 import view.*;
-import java.util.Random;
+import java.util.*;
 
 public class Fight {
+    private String[] pos_artifact = {"HELM", "WEAPON", "ARMOR"};
     protected Hero hero;
     protected Enemy enemy;
 
@@ -17,8 +18,25 @@ public class Fight {
         while (HeroHP > 0 && EnemyHP > 0) {
             // HERO HITS FIRST
             EnemyHP = (EnemyHP - HeroAttack);
-            if (EnemyHP <= 0)
+            if (EnemyHP <= 0) {
+                int drop = new Random().nextInt(10);
+                if (drop >= 5) {
+                    int rand = new Random().nextInt(3);
+                    String ArtifactType = pos_artifact[rand];
+                    switch (ArtifactType) {
+                        case "HELM":
+                            this.hero.setArmor(5);
+                            break;
+                        case "WEAPON":
+                            this.hero.setDamage(5);
+                            break;
+                        default:
+                            this.hero.setHP(5);
+                    }
+                }
+                player.setLevel(250 * player.getLevel());
                 return (0);
+            }
             HeroHP = (HeroHP - EnemyAttack);
             if (HeroHP <= 0)
                 return (1);
@@ -26,3 +44,9 @@ public class Fight {
         return (2);
     }
 }
+
+/*
+• Weapon - increases the attack
+• Armor - increases defense
+• Helm - increases hit points
+*/

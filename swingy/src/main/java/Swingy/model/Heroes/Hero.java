@@ -21,11 +21,23 @@ public abstract class Hero {
     public int getLevel() { return(this.Level); };
     // SET LEVEL
     public int setLevel() {
-        this.Level = this.Level + 1;
-        return (this.Level);
+        if (this.Level == 1 ) {
+
+        } else if (this.Level == 2 ) {
+
+        } else if (this.Level == 3 ) {
+
+        } else if (this.Level == 4 ) {
+
+        } else if (this.Level == 5 ) {
+
+        }
     };
     // GETTING ATTRIBUTES
     public abstract int getHP();
     public abstract int getArmor();
     public abstract int getDamage();
+    public abstract void setDamage(int val);
+    public abstract void setHP(int val);
+    public abstract void setArmor(int val);
 }

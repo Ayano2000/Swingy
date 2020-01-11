@@ -97,7 +97,6 @@ public class Map {
                 Position[1] = Position[1];
                 if (Position[0] == size || Position[0] == -1) {
                     System.out.println(Position[0]);
-                    System.out.println("LEVEL UP!");
                     return (1);
                 }
                 if (this.MapInstance[Position[0]][Position[1]] == 2) {
