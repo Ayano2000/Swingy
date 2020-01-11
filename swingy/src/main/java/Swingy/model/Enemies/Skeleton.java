@@ -13,7 +13,7 @@ public class Skeleton extends Enemy {
         super(hero, type);
         this.HP = 100 * hero.getLevel();
         this.Armor = 0 * hero.getLevel();
-        this.Damage = 60 * hero.getLevel();
+        this.Damage = 10 * hero.getLevel();
     };
 
     // GET HP

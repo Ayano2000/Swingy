@@ -25,7 +25,7 @@ public class GameController {
         };
         Map map = new Map(World);
         int resultant = -1;
-        while (Player.getLevel() <= 5) {
+        while (Player.getLevel() < 6) {
             if (resultant == 2) {
                 int choice = Integer.parseInt(Reader.readLine());
                 if (choice == 1) {
@@ -64,7 +64,7 @@ public class GameController {
                     World = preflight.PopulateMap(Player);
                     map = new Map(World);
                 } else {
-                    Player.setLevel();
+                    Player.setLevel(1);
                     World = preflight.PopulateMap(Player);
                     map = new Map(World);
                 }

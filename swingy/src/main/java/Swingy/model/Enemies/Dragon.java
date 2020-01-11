@@ -13,7 +13,7 @@ public class Dragon extends Enemy {
         super(hero, type);
         this.HP = 200 * hero.getLevel();
         this.Armor = 80 * hero.getLevel();
-        this.Damage = 50 * hero.getLevel();
+        this.Damage = 20 * hero.getLevel();
     };
 
     // GET HP
