@@ -11,9 +11,9 @@ public class Skeleton extends Enemy {
     // SUB CONSTRUCTOR --> SEE model.Hero
     public Skeleton(Hero hero, String type) {
         super(hero, type);
-        this.HP = 100 * hero.getLevel();
-        this.Armor = 0 * hero.getLevel();
-        this.Damage = 10 * hero.getLevel();
+        this.HP = 150 * hero.getLevel();
+        this.Armor = 10 * hero.getLevel();
+        this.Damage = 20 * hero.getLevel();
     };
 
     // GET HP

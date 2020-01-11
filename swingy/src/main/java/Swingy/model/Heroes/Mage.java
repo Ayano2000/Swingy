@@ -11,9 +11,9 @@ public class Mage extends Hero {
     // SUB CONSTRUCTOR --> SEE model.Hero
     public Mage(int type, String name) {
         super(type, name);
-        this.HP = 250;
-        this.Armor = 0;
-        this.Damage = 125;
+        this.HP = 100;
+        this.Armor = 5;
+        this.Damage = 40;
     };
     public void setHP(int val) {
         this.HP = this.HP + val;

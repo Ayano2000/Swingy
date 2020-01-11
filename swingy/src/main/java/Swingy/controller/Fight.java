@@ -41,7 +41,7 @@ public class Fight {
             if (HeroHP <= 0)
                 return (1);
         };
-        return (2);
+        return (1);
     }
 }
 

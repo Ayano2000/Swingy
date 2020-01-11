@@ -11,8 +11,8 @@ public class Witch extends Enemy {
     // SUB CONSTRUCTOR --> SEE model.Hero
     public Witch(Hero hero, String type) {
         super(hero, type);
-        this.HP = 75 * hero.getLevel();
-        this.Armor = 40 * hero.getLevel();
+        this.HP = 200 * hero.getLevel();
+        this.Armor = 4 * hero.getLevel();
         this.Damage = 25 * hero.getLevel();
     };
 

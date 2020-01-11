@@ -11,9 +11,9 @@ public class Orc extends Hero {
     // SUB CONSTRUCTOR --> SEE model.Hero
     public Orc(int type, String name) {
         super(type, name);
-        this.HP = 700;
-        this.Armor = 60;
-        this.Damage = 60;
+        this.HP = 400;
+        this.Armor = 3;
+        this.Damage = 10;
     };
     public void setHP(int val) {
         this.HP = this.HP + val;

@@ -11,9 +11,9 @@ public class Dragon extends Enemy {
     // SUB CONSTRUCTOR --> SEE model.Hero
     public Dragon(Hero hero, String type) {
         super(hero, type);
-        this.HP = 200 * hero.getLevel();
-        this.Armor = 80 * hero.getLevel();
-        this.Damage = 20 * hero.getLevel();
+        this.HP = 600 * hero.getLevel();
+        this.Armor = 0 * hero.getLevel();
+        this.Damage = 12 * hero.getLevel();
     };
 
     // GET HP

@@ -35,7 +35,7 @@ public class GameController {
                     String confirm = Reader.readLine();
                     if (confirm != null) {
                         Fight fight = new Fight();
-                        if (fight.Battle(this.Player, enemy) == 1) {
+                        if (fight.Battle(this.Player, enemy) == 0) {
                             // YOU WON
                             display.BattleWon(enemy.getType());
                             String Continue = Reader.readLine();
@@ -43,7 +43,7 @@ public class GameController {
                                 resultant = -1;
                             }
                             // press any key to confirm
-                        } else if (fight.Battle(this.Player, enemy) == 0) {
+                        } else if (fight.Battle(this.Player, enemy) == 1) {
                             display.GameOver(enemy.getType());
                             String exit = Reader.readLine();
                             if (exit != null) {

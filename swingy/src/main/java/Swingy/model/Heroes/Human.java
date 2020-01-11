@@ -11,9 +11,9 @@ public class Human extends Hero {
     // SUB CONSTRUCTOR --> SEE model.Hero
     public Human(int type, String name) {
         super(type, name);
-        this.HP = 500;
-        this.Armor = 30;
-        this.Damage = 80;
+        this.HP = 200;
+        this.Armor = 7;
+        this.Damage = 15;
     };
     public void setHP(int val) {
         this.HP = this.HP + val;
