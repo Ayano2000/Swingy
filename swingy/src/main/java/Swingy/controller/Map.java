@@ -20,6 +20,9 @@ public class Map {
         display.PrintDirectionChoice();
         while (true) {
             String input = Reader.readLine();
+            while (!input.equals("1") && !input.equals("2") && !input.equals("3") && !input.equals("4")) {
+                input = Reader.readLine();
+            }
             this.CurrentMove = Direction[Integer.parseInt(input) - 1];
             int EventChecker = UpdateHeroPosition();
             System.out.println(EventChecker);
