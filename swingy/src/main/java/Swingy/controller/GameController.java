@@ -4,6 +4,7 @@ import model.*;
 import java.io.*;
 import java.util.*;
 import java.lang.*;
+import java.lang.String;
 
 
 public class GameController {
@@ -27,8 +28,9 @@ public class GameController {
         int resultant = -1;
         while (Player.getLevel() < 6) {
             if (resultant == 2) {
-                int choice = Integer.parseInt(Reader.readLine());
-                if (choice == 1) {
+                String choice = Reader.readLine();
+                System.out.println("");
+                if (choice.equals("1")) {
 //                    FIGHT
                     enemy = CreateEnemy.generateEnemy(this.Player);
                     display.ShowEnemy(enemy);
@@ -53,10 +55,13 @@ public class GameController {
                             }
                         }
                     }
-                } else {
+                } else if (choice.equals("2")){
 //                    RUN
                     display.RunAwayLittleBitch();
 //                    resultant = -1;
+                }
+                else {
+                    choice = Reader.readLine();
                 }
             } else {
                 resultant = map.TraverseMap(World);
