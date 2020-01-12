@@ -57,6 +57,7 @@ public class Output {
 
     public void PrintDirectionChoice() {
         System.out.println(YELLOW + "1 = NORTH | 2 = SOUTH | 3 = EAST | 4 = WEST" + RESET);
+        System.out.println(YELLOW + "\"Exit\" to save and quit game " + RESET);
     }
 
     public void EnemyEncountered() {
