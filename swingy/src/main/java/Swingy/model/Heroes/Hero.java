@@ -4,10 +4,10 @@ import view.*;
 
 public abstract class Hero {
     private String[] HeroType = { "MAGE", "WARRIOR", "ORC", "HUMAN" };
-    protected String Type;
-    protected String Name;
-    protected int Level = 1;
-    protected int XP = 0;
+    public String Type;
+    public String Name;
+    public int Level = 1;
+    public int XP = 0;
 
     // CONSTRUCTOR SETS ALL HEROES VARIABLES;
     public Hero (int type, String name) {

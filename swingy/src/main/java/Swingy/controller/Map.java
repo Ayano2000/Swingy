@@ -23,6 +23,8 @@ public class Map {
             while (!input.equals("1") && !input.equals("2") && !input.equals("3") && !input.equals("4")) {
                 input = Reader.readLine();
                 if (input.equalsIgnoreCase("Exit")) {
+                    GameData gameData = new GameData();
+                    gameData.SaveGame();
                     System.exit(1);
                 }
             }

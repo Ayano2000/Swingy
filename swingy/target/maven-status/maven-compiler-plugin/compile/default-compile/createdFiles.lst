@@ -1,8 +1,8 @@
 model/Orc.class
 view/InterfacePage.class
 view/UserInterface$1.class
-model/Witch.class
 model/GenerateEnemy.class
+model/Witch.class
 controller/GameData.class
 model/Dragon.class
 model/Human.class
