@@ -24,7 +24,7 @@ public class Map {
                 input = Reader.readLine();
                 if (input.equalsIgnoreCase("Exit")) {
                     GameData gameData = new GameData();
-                    gameData.SaveGame();
+                    gameData.SaveGame(map);
                     System.exit(1);
                 }
             }
