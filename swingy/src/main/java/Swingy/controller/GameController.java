@@ -18,33 +18,32 @@ public class GameController {
     protected int[][] World;
 
     public void Game(int type) throws IOException {
-        if (type == 1 /* TYPE 1 == NEW GAME */) {
+        if (type == 1) {
             Player = CreateHero.generateHero();
             World = preflight.PopulateMap(Player);
+            Map map = new Map(this.Player, World);
         } else {
-            // TODO --> LOAD GAME
+            GameData gameData = new GameData();
+            gameData.LoadGame();
+            while(true);
         };
-        Map map = new Map(this.Player, World);
         int resultant = -1;
         while (Player.getLevel() < 6) {
             if (resultant == 2) {
                 String choice = Reader.readLine();
                 System.out.println("");
                 if (choice.equals("1")) {
-//                    FIGHT
                     enemy = CreateEnemy.generateEnemy(this.Player);
                     display.ShowEnemy(enemy);
                     String confirm = Reader.readLine();
                     if (confirm != null) {
                         Fight fight = new Fight();
                         if (fight.Battle(this.Player, enemy) == 0) {
-                            // YOU WON
                             display.BattleWon(enemy.getType());
                             String Continue = Reader.readLine();
                             if (Continue != null) {
                                 resultant = -1;
                             }
-                            // press any key to confirm
                         } else if (fight.Battle(this.Player, enemy) == 1) {
                             display.GameOver(enemy.getType());
                             String exit = Reader.readLine();
@@ -56,9 +55,7 @@ public class GameController {
                         }
                     }
                 } else if (choice.equals("2")){
-//                    RUN
                     display.RunAwayLittleBitch();
-//                    resultant = -1;
                 }
                 else {
                     choice = Reader.readLine();
