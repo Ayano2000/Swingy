@@ -9,10 +9,12 @@ public class Map {
     private String[] Direction = { "NORTH", "SOUTH", "EAST", "WEST" };
     private String CurrentMove;
     private Output display = new Output();
+    public Hero player;
     protected int[][] MapInstance;
 
-    public Map(int[][] map) {
+    public Map(Hero player, int[][] map) {
         this.MapInstance = map;
+        this.player = player;
     }
 
     public int TraverseMap(int[][] map) throws IOException {
@@ -24,7 +26,7 @@ public class Map {
                 input = Reader.readLine();
                 if (input.equalsIgnoreCase("Exit")) {
                     GameData gameData = new GameData();
-                    gameData.SaveGame(map);
+                    gameData.SaveGame(this.player, map);
                     System.exit(1);
                 }
             }

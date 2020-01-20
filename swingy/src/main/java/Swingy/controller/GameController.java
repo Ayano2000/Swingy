@@ -24,7 +24,7 @@ public class GameController {
         } else {
             // TODO --> LOAD GAME
         };
-        Map map = new Map(World);
+        Map map = new Map(this.Player, World);
         int resultant = -1;
         while (Player.getLevel() < 6) {
             if (resultant == 2) {
@@ -67,11 +67,11 @@ public class GameController {
                 resultant = map.TraverseMap(World);
                 if (resultant == 1) {
                     World = preflight.PopulateMap(Player);
-                    map = new Map(World);
+                    map = new Map(this.Player, World);
                 } else {
                     Player.setLevel(1);
                     World = preflight.PopulateMap(Player);
-                    map = new Map(World);
+                    map = new Map(this.Player, World);
                 }
             }
 

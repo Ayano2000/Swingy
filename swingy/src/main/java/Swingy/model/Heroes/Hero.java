@@ -16,6 +16,8 @@ public abstract class Hero {
     };
     // GET TYPE
     public String getType() { return(this.Type); };
+    // GET XP
+    public int getXP() { return(this.XP); };
     // GET NAME
     public String getName() { return(this.Name); };
     // GET LEVEL
