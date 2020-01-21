@@ -2,6 +2,7 @@ package controller;
 import view.*;
 import model.*;
 import java.io.*;
+import javax.validation.constraints.*;
 
 public class Map {
     private static BufferedReader Reader = new BufferedReader(new InputStreamReader(System.in));
@@ -17,7 +18,7 @@ public class Map {
         this.player = player;
     }
 
-    public int TraverseMap(int[][] map) throws IOException {
+    public int TraverseMap(@NotNull int[][] map) throws IOException {
         display.PrintMap(map);
         display.PrintDirectionChoice();
         while (true) {
