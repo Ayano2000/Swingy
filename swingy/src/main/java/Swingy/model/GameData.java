@@ -33,16 +33,16 @@ public class GameData {
         switch(line.split(" ")[1]) {
             case "MAGE":
                 line = reader.readLine();
-                player = new Mage(1, line.split(" ")[1]);
+                player = new Mage(0, line.split(" ")[1]);
                 break;
             case "WARRIOR":
-                player = new Warrior(2, line.split(" ")[1]);
+                player = new Warrior(1, line.split(" ")[1]);
                 break;
             case "ORC":
-                player = new Orc(3, line.split(" ")[1]);
+                player = new Orc(2, line.split(" ")[1]);
                 break;
             default:
-                player = new Human(4, line.split(" ")[1]);
+                player = new Human(3, line.split(" ")[1]);
         }
         reader.close();
         return (player);
@@ -94,6 +94,15 @@ public class GameData {
         BufferedReader reader = new BufferedReader(new FileReader("./saves.txt"));
         String line = reader.readLine();
         while (!line.split(" ")[0].equals("DAMAGE"))
+            line = reader.readLine();
+        int x = Integer.parseInt(line.split(" ")[1]);
+        return (x);
+    }
+
+    public int SetLevel() throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader("./saves.txt"));
+        String line = reader.readLine();
+        while (!line.split(" ")[0].equals("LEVEL"))
             line = reader.readLine();
         int x = Integer.parseInt(line.split(" ")[1]);
         return (x);

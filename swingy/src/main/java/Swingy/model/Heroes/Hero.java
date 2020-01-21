@@ -1,6 +1,7 @@
 package model;
 import java.io.*;
 import view.*;
+import javax.validation.constraints.*;
 
 public abstract class Hero {
     private String[] HeroType = { "MAGE", "WARRIOR", "ORC", "HUMAN" };
@@ -10,7 +11,7 @@ public abstract class Hero {
     public int XP = 0;
 
     // CONSTRUCTOR SETS ALL HEROES VARIABLES;
-    public Hero (int type, String name) {
+    public Hero (@NotNull int type, @NotNull String name) {
         this.Type = HeroType[type];
         this.Name = name;
     };
@@ -53,6 +54,8 @@ public abstract class Hero {
         }
         return (2);
     };
+    // SET LOAD LEVEL
+    public void SetLevel(int val) { this.Level = val; };
     // GETTING ATTRIBUTES
     public abstract int getHP();
     public abstract int getArmor();

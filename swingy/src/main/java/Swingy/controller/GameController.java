@@ -27,6 +27,7 @@ public class GameController {
             this.Player.setHP(gameData.SetHp());
             this.Player.setArmor(gameData.SetArmor());
             this.Player.setDamage(gameData.SetDamage());
+            this.Player.SetLevel(gameData.SetLevel());
             World = gameData.GetMap();
         };
         Map map = new Map(this.Player, World);

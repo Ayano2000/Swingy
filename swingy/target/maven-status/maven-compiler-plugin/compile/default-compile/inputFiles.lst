@@ -1,5 +1,4 @@
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/model/Heroes/Warrior.java
-/homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/controller/GameData.java
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/model/Enemies/Skeleton.java
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/controller/Fight.java
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/model/Heroes/Orc.java
@@ -7,6 +6,7 @@
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/controller/Map.java
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/model/Heroes/GenerateHero.java
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/controller/Preflight.java
+/homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/model/GameData.java
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/controller/GameController.java
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/App.java
 /homes/ayano/Desktop/Swingy/swingy/src/main/java/Swingy/model/Enemies/GenerateEnemy.java
