@@ -13,7 +13,7 @@ public class GameController {
     private static GenerateEnemy CreateEnemy = new GenerateEnemy();
     private static Preflight preflight = new Preflight();
     private static Output display = new Output();
-    private Hero Player;
+    protected Hero Player;
     private Enemy enemy;
     protected int[][] World;
 
@@ -21,12 +21,15 @@ public class GameController {
         if (type == 1) {
             Player = CreateHero.generateHero();
             World = preflight.PopulateMap(Player);
-            Map map = new Map(this.Player, World);
         } else {
             GameData gameData = new GameData();
-            gameData.LoadGame();
-            while(true);
+            this.Player = gameData.LoadGame();
+            this.Player.setHP(gameData.SetHp());
+            this.Player.setArmor(gameData.SetArmor());
+            this.Player.setDamage(gameData.SetDamage());
+            World = gameData.GetMap();
         };
+        Map map = new Map(this.Player, World);
         int resultant = -1;
         while (Player.getLevel() < 6) {
             if (resultant == 2) {

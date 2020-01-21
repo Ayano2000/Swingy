@@ -3,6 +3,7 @@ import model.*;
 import view.*;
 import java.io.*;
 import java.io.File;
+import java.util.*;
 
 public class GameData {
 
@@ -27,9 +28,8 @@ public class GameData {
 
     public Hero LoadGame() throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader("./saves.txt"));
-        Hero player;
         String line = reader.readLine();
-        System.out.println(line.split(" ")[1]);
+        Hero player = null;
         switch(line.split(" ")[1]) {
             case "MAGE":
                 line = reader.readLine();
@@ -44,8 +44,58 @@ public class GameData {
             default:
                 player = new Human(4, line.split(" ")[1]);
         }
-        System.out.println(line.split(" ")[1]);
         reader.close();
         return (player);
+    }
+
+    public int[][] GetMap() throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader("./saves.txt"));
+        String line = reader.readLine();
+        while (!line.equals("MAP"))
+            line = reader.readLine();
+        line = reader.readLine();
+        int size = line.length();
+        int world[][] = new int[size][size];
+        char[] ch;
+        int x = 0;
+        while (line != null && !line.isEmpty()) {
+            ch = new char[line.length()];
+            for (int i = 0; i < line.length(); i++) {
+                ch[i] = line.charAt(i);
+            }
+            for (int pos = 0; pos < size; pos++) {
+                world[x][pos] = Integer.parseInt(String.valueOf(ch[pos]));
+            }
+            line = reader.readLine();
+            x++;
+        }
+        return(world);
+    }
+
+    public int SetHp() throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader("./saves.txt"));
+        String line = reader.readLine();
+        while (!line.split(" ")[0].equals("HP"))
+            line = reader.readLine();
+        int x = Integer.parseInt(line.split(" ")[1]);
+        return (x);
+    }
+
+    public int SetArmor() throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader("./saves.txt"));
+        String line = reader.readLine();
+        while (!line.split(" ")[0].equals("ARMOR"))
+            line = reader.readLine();
+        int x = Integer.parseInt(line.split(" ")[1]);
+        return (x);
+    }
+
+    public int SetDamage() throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader("./saves.txt"));
+        String line = reader.readLine();
+        while (!line.split(" ")[0].equals("DAMAGE"))
+            line = reader.readLine();
+        int x = Integer.parseInt(line.split(" ")[1]);
+        return (x);
     }
 }

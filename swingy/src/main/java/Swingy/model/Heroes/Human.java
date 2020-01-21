@@ -16,13 +16,13 @@ public class Human extends Hero {
         this.Damage = 15;
     };
     public void setHP(int val) {
-        this.HP = this.HP + val;
+        this.HP = val;
     };
     public void setDamage(int val) {
-        this.Damage = this.Damage + val;
+        this.Armor = val;
     };
     public void setArmor(int val) {
-        this.Armor = this.Armor + val;
+        this.Damage = val;
     };
     // GET HP
     public int getHP() { return(this.HP); };

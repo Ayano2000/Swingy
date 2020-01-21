@@ -16,13 +16,13 @@ public class Orc extends Hero {
         this.Damage = 10;
     };
     public void setHP(int val) {
-        this.HP = this.HP + val;
+        this.HP = val;
     };
     public void setDamage(int val) {
-        this.Damage = this.Damage + val;
+        this.Damage = val;
     };
     public void setArmor(int val) {
-        this.Armor = this.Armor + val;
+        this.Armor = val;
     };
     // GET HP
     public int getHP() { return(this.HP); };
